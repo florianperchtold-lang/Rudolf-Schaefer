@@ -127,3 +127,49 @@ Diese Differenziatoren sind einzigartig und nicht simulierbar:
 - [ ] Foto-Shooting: Termin für Team-Portraits und Büro-Fotos?
 - [ ] Interner Ansprechpartner auf Kundenseite für Freigaben?
 - [ ] Corporate Design: Logo als SVG vorhanden?
+
+---
+
+## SEO-Historie & Kontext
+
+### Bisherige SEO-Agentur: Fairrank GmbH
+- Langjährige Zusammenarbeit mit Martin Schäfer
+- Kundennummer: 89982
+- Ansprechpartnerin: Christine Hillebold (Senior SEO Managerin)
+- Fairrank ist Teil der 11880-Gruppe
+- Anfang 2025: Martin Schäfer hat „grosses SEO-Paket" gebucht
+- Julie Schäfer ist mit der Zusammenarbeit „überhaupt nicht zufrieden"
+- Fairrank wird durch Robert Eberhard / cult consult abgelöst
+- Fairrank-Textvorschläge für neue Website werden nicht übernommen
+
+### Warum Fairrank nicht weitergeführt wird
+Fairrank hat konkrete Textvorschläge für die Hausverwaltungsseite gemacht.
+Julies Einschätzung (18.01.2026):
+- Erster Versuch: Seite komplett umgeschrieben, persönliche Anrede, „totales Geschwafel"
+- Zweiter Versuch: 2–3 Sätze je Block einfügen → Layout und Prägnanz gehen verloren
+- Mobile-Ansicht würde leiden
+- Keine Antwort auf Frage nach KI-optimierter SEO (GEO)
+- Themenvorschläge für News-Bereich zu mieterorientiert, zu negativ
+
+### Neuer SEO-Partner: Robert Eberhard / cult consult
+- Georgenstraße 90, 80798 München
+- Tel: +49-89-28701251
+- E-Mail: robert.eberhard@cult-consult.com
+- IST-Analyse März 2026 abgeschlossen
+- Pillar-Cluster-Strategie empfohlen (→ 05_SEO.md)
+- Weiteres: Off-Page-SEO als separater Step geplant
+
+---
+
+## Technischer Hintergrund (Bestand)
+
+| Element | Aktueller Stand |
+|---------|----------------|
+| Hosting | IONOS (war instabil – häufige Ausfälle 2024/2025) |
+| CMS | WordPress (alt, fast 10 Jahre) |
+| SEO-Plugin | Yoast (nachinstalliert auf Fairrank-Wunsch, Sept. 2025) |
+| Analytics | etracker (reaktiviert Aug. 2025) |
+| Immobilien-Software | OnOffice |
+| Mietangebote-Portal | Immobilie1 (ausschliesslich) |
+| Mietangebote-Integration | Iframe/Widget – Konflikte mit WordPress-Code |
+| Mobile | Bekannte Probleme (iPhone: Button-Fehler, Wackeln im Hochformat) |

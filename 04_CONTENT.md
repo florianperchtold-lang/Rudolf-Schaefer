@@ -369,3 +369,170 @@ Bestand beibehalten – Pflichtlink in Newslettern.
 | 9 | Stellenangebote aktuell? | Kunde | Mittel |
 | 10 | EN-Übersetzung aller Seiten | Agentur | Hoch |
 | 11 | Impressum + Datenschutz rechtlich aktualisieren | Rechtsanwalt | Hoch |
+
+---
+
+## News-Bereich – Content-Strategie
+
+### Was nicht funktioniert hat (Fairrank-Ansatz)
+Fairrank wollte folgende Themen für den News-Bereich:
+Nebenkostenabrechnung, DSGVO, Schimmelprävention, Mietrecht, Kündigung/Räumung,
+Heizungswartung, Mieterauswahl, Beschwerdemanagement, Hausordnung,
+Objektübergabe, Handwerkermanagement, Leerstandsmanagement, Rauchmelderpflicht,
+E-Mobilität, Barrierefreiheit.
+
+**Problem:** Zu mieterorientiert, zu negativ, verfehlt Kernzielgruppe Vermieter.
+Bisherige Praxis (IVD Süd-Pressemitteilungen übernehmen) reicht ebenfalls
+nicht aus – eigener Content mit Mehrwert ist nötig.
+
+### Was stattdessen gilt (Eberhard-Strategie)
+News und Evergreen Content mit Eigentümer-Fokus, verzahnt mit Leistungsseiten:
+
+**Evergreen-Cluster (Beispiele):**
+- Was kostet eine Hausverwaltung in München? (Eigentümer-Frage)
+- Hausverwaltung wechseln – Ablauf und typische Fehler
+- WEG-Verwaltung vs. Mietverwaltung – Unterschiede für Eigentümer
+- Checkliste: Die richtige Hausverwaltung in München finden
+- Rechte und Pflichten einer Hausverwaltung (Eigentümer-Perspektive)
+
+**News (aktuell, Eigentümer-relevant):**
+- Grundsteuerreform München – was bedeutet das für Vermieter?
+- WEG-Gesetz Änderungen – aktuell
+- Münchner Immobilienmarkt – Mietpreisentwicklung
+- IVD-Marktberichte (mit eigenem Mehrwert aufbereitet, nicht 1:1 übernommen)
+
+**Tone of Voice für News:**
+Alle Themen aus Eigentümer-Perspektive schreiben. Kein Angst-Content.
+Kein Schreiben für Mieter. Jeder Artikel mündet in einem CTA zur
+relevanten Leistungsseite.
+
+### Technische Content-Anforderungen
+- Alle News und Evergreen-Artikel: min. 600–800 Wörter
+- Eigenständige WordPress-Posts (kein externes CMS)
+- Kategorie-System: Hausverwaltung / Vermietung / Immobilienmarkt / WEG
+- Autor: Martin Schäfer oder Rudolf Schäfer KG Redaktion
+- Schema.org: NewsArticle je Artikel automatisch
+
+---
+
+## Custom Post Types – vollständige Struktur
+
+### CPT 1: News (WordPress Posts nativ)
+
+WordPress Standard-Posts werden verwendet – kein eigener CPT nötig.
+
+**ACF-Ergänzungen:**
+```
+Kategorie (Taxonomy): hausverwaltung | vermietung | immobilienmarkt | weg
+Zielgruppe (Checkbox): eigentümer | mieter | investoren
+Featured: ja/nein (für Startseiten-Vorschau)
+```
+
+**Redakteur-Workflow:**
+Neuer Artikel → Titel → Text (Gutenberg oder ACF) → Kategorie → Beitragsbild → Veröffentlichen
+
+---
+
+### CPT 2: Team
+
+**Slug:** `team`
+**Archiv-URL:** `/team/`
+
+**ACF-Felder:**
+```
+portrait          Bild (Pflicht – Alt-Text Pflichtfeld)
+name              Text (Pflicht)
+funktion          Text (Pflicht)
+abteilung         Select: geschaeftsleitung | verwaltung | technik |
+                           buchhaltung | vermietung | sekretariat
+email             E-Mail
+telefon           Text (optional – nur bei Ansprechpartnern)
+eintrittsjahr     Zahl
+sprachen          Checkbox: deutsch | englisch (optional)
+ansprechpartner   Checkbox: ja/nein (steuert Sichtbarkeit auf Leistungsseiten)
+reihenfolge       Zahl (für manuelle Sortierung)
+```
+
+**Template-Logik:**
+- `/team/` → alle Mitglieder, sortiert nach `reihenfolge`
+- Leistungsseiten → nur Mitglieder mit `ansprechpartner = ja`
+  gefiltert nach passender `abteilung`
+
+---
+
+### CPT 3: Immobilien
+
+**Slug:** `immobilie`
+**Kein eigenes Archiv** – Inhalte erscheinen auf bestehenden Seiten
+via `WP_Query` gefiltert nach `bereiche`.
+
+**ACF-Felder:**
+```
+bereiche          Checkbox (Mehrfachauswahl – Pflicht):
+                    [x] verwaltung  → /hausverwaltung/referenzen/
+                    [x] vermietung  → /vermietung/
+                    [x] verkauf     → /verkauf/
+
+titel             Text (Pflicht)
+stadtteil         Text / Select (München-Stadtteile)
+objekttyp         Select: mehrfamilienhaus | wohn-geschaeftshaus |
+                          buerohaus | eigentumswohnung | investmentobjekt
+status            Select: verfuegbar | vermietet | verkauft | referenz
+
+// Vermietung-spezifisch (nur sichtbar wenn bereiche = vermietung)
+zimmer            Zahl
+wohnflaeche       Zahl (m²)
+mietpreis         Zahl (€/Monat, Kaltmiete)
+nebenkosten       Zahl (€/Monat)
+verfuegbar_ab     Datum
+expose_pdf        Datei
+
+// Verkauf-spezifisch (nur sichtbar wenn bereiche = verkauf)
+kaufpreis         Zahl
+grundstueck       Zahl (m²)
+baujahr           Zahl
+verkauft          Checkbox
+
+// Allgemein
+fotos             Galerie (multiple Bilder, je mit Alt-Text Pflichtfeld)
+beschreibung      Rich Text
+lage_text         Text (für SEO-relevante Lagebeschreibung)
+geo_lat           Zahl (für Karte)
+geo_lng           Zahl (für Karte)
+onoffice_id       Text (Verknüpfung mit OnOffice, falls API genutzt)
+```
+
+**Query-Beispiel Vermietungsseite:**
+```php
+$args = [
+  'post_type'  => 'immobilie',
+  'meta_query' => [[
+    'key'     => 'bereiche',
+    'value'   => 'vermietung',
+    'compare' => 'LIKE'
+  ]],
+  'orderby' => 'date',
+  'order'   => 'DESC'
+];
+```
+
+**OnOffice-Integration:**
+OnOffice hat eine OpenImmo-Schnittstelle zu WordPress.
+Prüfen: Können Objekte automatisch aus OnOffice in den CPT importiert werden?
+Falls ja: `onoffice_id` als Verknüpfungsfeld, Sync via WP-CLI oder Cron.
+Falls nein: Manuelle Eingabe über ACF-Interface.
+
+---
+
+## Redaktionelle Pflege – Übersicht
+
+| Bereich | Wer pflegt | Wie oft | Aufwand je Eintrag |
+|---------|-----------|---------|-------------------|
+| News | Julie Schäfer / Redaktion | 1–2×/Monat | ~30 Min. |
+| Team | Perchti / Interne | Bei Personaländerung | ~10 Min. |
+| Immobilien Vermietung | Karin Breyl / Elea Franke | Bei neuem Angebot | ~20 Min. |
+| Immobilien Verkauf | Martin Schäfer | Bei neuem Objekt | ~20 Min. |
+| Immobilien Referenzen | Perchti | Projektabschluss | ~15 Min. |
+| FAQ | Julie Schäfer | Bei Bedarf | ~10 Min. |
+| Testimonials | Martin Schäfer / Julie | Bei neuem Feedback | ~5 Min. |
+
