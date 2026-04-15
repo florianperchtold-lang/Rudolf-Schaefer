@@ -345,6 +345,50 @@ Tone of Voice aus 01_BRIEF.md.
 
 ---
 
+## Überregionale SEO-Strategie (Wachstumsziel)
+
+> **Strategische Frage an Robert Eberhard** – in separatem Meeting besprechen.
+
+Die aktuelle SEO-Strategie ist vollständig auf den Lokalmodifier „München" ausgerichtet. Das entspricht dem IST-Stand – widerspricht aber dem erklärten Wachstumsziel: Rudolf Schäfer KG will über den Münchner Markt hinauswachsen und national an Bedeutung gewinnen.
+
+### Das Problem
+
+Jede URL, jeder Meta-Title, jedes Ziel-Keyword enthält „München". Das erzeugt lokale Sichtbarkeit, aber keine nationale Autorität. Wer in Hamburg oder Frankfurt nach einem überregionalen Verwalter sucht, findet Rudolf Schäfer KG nicht.
+
+### Vier SEO-Hebel für überregionale Sichtbarkeit
+
+**1. Keyword-Ebene: zweite Schicht aufbauen**
+
+| Lokal (vorhanden) | Regional/National (fehlend) |
+|-------------------|-----------------------------|
+| Hausverwaltung München | Hausverwaltung Bayern |
+| Immobilienverwaltung München | Hausverwaltung Deutschland |
+| Hausverwaltung wechseln München | Immobilienverwaltung bundesweit |
+| – | Property Management Germany (EN) |
+
+**2. E-E-A-T / Autorschaft national skalieren**
+
+Martin Schäfers Amt als IVD-Süd-Vorstandsvorsitzender ist ein national verwertbares Autoritätssignal. Mögliche Maßnahmen:
+- Fachbeiträge auf IVD-Verbandsplattformen mit Autorenschaft
+- Pressemitteilungen zu Branchenthemen auf nationaler Ebene
+- Zitate und Verlinkungen aus nationalen Immobilienmedien
+
+**3. Schema Markup erweitern**
+
+`areaServed` aktuell: München. Anpassung nötig für Seiten, die überregionale Leistungen beschreiben:
+- Bayern-weite Verwaltung: `areaServed: Bayern`
+- Deutschlandweit: `areaServed: Deutschland`
+
+**4. GEO – nationale KI-Autorität**
+
+KI-Systeme (ChatGPT, Gemini, Perplexity) antworten auf „Wer ist eine renommierte Hausverwaltung in Deutschland?" auf Basis von Fachartikeln, Verbandspositionen und zitierbaren Inhalten – nicht auf Basis von Geo-Modifiern. Content-Strategie muss das berücksichtigen.
+
+### Empfehlung
+
+> **Frage an Robert Eberhard:** Wann und wie bauen wir die zweite Keyword-Ebene auf? Separater Content-Cluster, eigene Landingpages, oder durch Pillar-Erweiterung? Welche Quick Wins gibt es ohne eigene URL-Struktur?
+
+---
+
 ## Analytics & Monitoring
 
 **Aktuell (Bestand):** etracker (reaktiviert Aug. 2025, von Fairrank genutzt)
@@ -395,6 +439,7 @@ Tone of Voice aus 01_BRIEF.md.
 - [ ] Content-Briefings schreiben (Primary KW, Wortanzahl, H2-Struktur, FAQ je Seite)
 - [ ] Eberhard: Konkrete Seitenstruktur-Empfehlung auf Basis Keywordanalyse anfordern
 - [ ] Eberhard: Off-Page-SEO-Strategie als separaten Step besprechen
+- [ ] Eberhard: Überregionale SEO-Strategie besprechen – zweite Keyword-Ebene (Bayern / Deutschland), nationale E-E-A-T-Maßnahmen, Schema-Erweiterung
 - [ ] SEO-Plugin auswählen: RankMath vs. SEOPress (für WordPress/Bricks)
 - [ ] Analytics-Tool einrichten (etracker ablösen) – Tool nach Empfehlung Robert Eberhard
 - [ ] Fairrank-Vertrag: Kündigung prüfen / Übergabe an Eberhard koordinieren
