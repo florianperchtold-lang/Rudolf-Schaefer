@@ -349,11 +349,19 @@ Tone of Voice aus 01_BRIEF.md.
 
 > **Strategische Frage an Robert Eberhard** – in separatem Meeting besprechen.
 
-Die aktuelle SEO-Strategie ist vollständig auf den Lokalmodifier „München" ausgerichtet. Das entspricht dem IST-Stand – widerspricht aber dem erklärten Wachstumsziel: Rudolf Schäfer KG will über den Münchner Markt hinauswachsen und national an Bedeutung gewinnen.
+### Wachstumspriorität
+
+| Priorität | Markt | Status |
+|-----------|-------|--------|
+| **Prio 1** | München | Kern – weiter ausbauen |
+| **Prio 2** | Münchner Umland (Landkreise, Oberbayern) | Nächster Schritt |
+| **Prio 3** | Überregional / Deutschland | Mittelfristiges Ziel |
+
+Die aktuelle SEO-Strategie deckt Prio 1 ab. Prio 2 und 3 sind noch nicht adressiert.
 
 ### Das Problem
 
-Jede URL, jeder Meta-Title, jedes Ziel-Keyword enthält „München". Das erzeugt lokale Sichtbarkeit, aber keine nationale Autorität. Wer in Hamburg oder Frankfurt nach einem überregionalen Verwalter sucht, findet Rudolf Schäfer KG nicht.
+Jede URL, jeder Meta-Title, jedes Ziel-Keyword enthält „München". Das erzeugt lokale Sichtbarkeit, aber keine regionale oder nationale Autorität.
 
 ### Vier SEO-Hebel für überregionale Sichtbarkeit
 

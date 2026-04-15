@@ -257,15 +257,53 @@ Bricks-Komponenten nutzen ausschliesslich `var(--color-*)`.
 
 ---
 
-## Mehrsprachigkeit (DE/EN)
+## Mehrsprachigkeit
+
+### URL-Struktur
 
 ```
 DE: /hausverwaltung/            (Default, kein Präfix)
-EN: /en/property-management/
+EN: /en/property-management/    (Subfolder /en/)
 
-Plugin: WPML oder Polylang
+Plugin:   WPML oder Polylang (Entscheidung offen)
 hreflang: de → /, en → /en/, x-default → /
 ```
+
+**Warum `/en/` Subfolder – nicht Subdomain oder eigene Domain:**
+
+| Option | Domain-Authority | Crawl-Budget | Empfehlung |
+|--------|-----------------|--------------|------------|
+| `rudolfschaefer.de/en/` | Geteilt mit DE ✅ | Gemeinsam ✅ | **Richtig** |
+| `en.rudolfschaefer.de/` | Getrennt ❌ | Getrennt ❌ | Nicht empfohlen |
+| `rudolfschaefer.com` | Null (neu) ❌ | Getrennt ❌ | Nicht empfohlen |
+
+Google teilt Authority, Backlinks und Trust innerhalb einer Domain. Der Subfolder ist die von Google empfohlene Lösung für Mehrsprachigkeit.
+
+### Weitere Sprachen (KI-gestützt)
+
+Zusätzliche Sprachversionen sind technisch und inhaltlich umsetzbar – mit klar definierten Regeln:
+
+**Voraussetzungen für weitere Sprachen:**
+- DE-Ausgangstexte müssen qualitativ hochwertig und final sein
+- Jede Sprachversion bekommt eigene URLs und `hreflang`-Tags
+- Kritische Seiten (Hausverwaltung, Kontakt, Impressum) werden nach der KI-Übersetzung manuell reviewt
+- Dünne, unreviewte Maschinenübersetzungen sind ein Google-Penalty-Risiko
+
+**Workflow KI-gestützte Übersetzung:**
+1. Finale DE-Texte im CMS
+2. KI-Übersetzung (Claude / DeepL) je Seite
+3. Review kritischer Seiten (Leistungen, rechtliche Seiten)
+4. Publikation unter eigenem Sprachpfad (`/fr/`, `/it/`, etc.)
+5. `hreflang`-Tags automatisch via WPML/Polylang
+
+**Mögliche weitere Sprachen (Priorität nach Zielgruppe):**
+
+| Sprache | Pfad | Zielgruppe | Prio |
+|---------|------|------------|------|
+| Englisch | `/en/` | Internationale Investoren, Expats | **Phase 1** |
+| Weitere | TBD | Nach Marktanalyse | Phase 2+ |
+
+> Entscheidung über weitere Sprachen nach Phase 1 (EN) und Marktbewertung.
 
 ---
 
