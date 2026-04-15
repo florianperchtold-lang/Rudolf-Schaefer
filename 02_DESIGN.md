@@ -114,14 +114,14 @@ Die Seite wird nicht gelesen – sie wird **erlebt**. Der Scroll ist kein Naviga
 > **Alle Animationen respektieren `prefers-reduced-motion: reduce`.**
 > Performance-Budget: Keine Animation darf Layout-Recalculation triggern → ausschliesslich `transform` und `opacity`.
 
-### Verboten (Performance & Fokus)
+### Nur optimiert einzusetzen
 
-- ❌ GSAP, Framer Motion, Locomotive Scroll *(Library-Overhead)*
-- ❌ Page Transitions (Barba.js)
-- ❌ Custom Cursor
-- ❌ Exzessiver Parallax (Hintergrundbilder die bei jedem Scroll-Pixel neu rechnen)
-- ❌ Video-Backgrounds
-- ❌ Scroll-Hijacking (natürlicher Scroll-Flow muss erhalten bleiben)
+- ⚠️ GSAP, Framer Motion, Locomotive Scroll – nur wenn nativ nicht lösbar, bewusst und gezielt einsetzen
+- ⚠️ Page Transitions – nur wenn Performance-Budget es erlaubt
+- ⚠️ Parallax – subtil, nie auf Hintergrundbilder mit Layout-Recalculation
+- ⚠️ Video-Backgrounds – nur mit autoplay/muted/preload="none", nie als Hero-Standard
+- ⚠️ Scroll-Hijacking – natürlicher Scroll-Flow muss grundsätzlich erhalten bleiben
+- ❌ Custom Cursor – kein Mehrwert, Accessibility-Problem
 
 ---
 
@@ -153,6 +153,8 @@ Die Seite folgt keiner klassischen „Section nach Section"-Logik. Stattdessen:
 
 München ist keine bayerische Klischeestadt – es ist eine der modernsten Metropolen Europas, die gleichzeitig tief in ihrer Geschichte verwurzelt ist. Das Design spiegelt genau das: **urban, zeitgemäss, weltgewandt – und unverkennbar münchnerisch.**
 
+**Wichtig:** Der Münchenbezug ist Vertrauensbasis und Identitätsanker – kein limitierender Rahmen. Das Unternehmen will über den lokalen Markt hinauswachsen. Das Design darf münchnerisch verwurzelt wirken, muss aber gleichzeitig überregional und national anschlussfähig sein.
+
 Was das bedeutet:
 
 | Erwünscht | Verboten |
@@ -178,7 +180,7 @@ Die Münchner Skyline – Frauenkirche, Olympiaturm, Theatinerkirche, Maximilian
 | Über-uns-Seite | Grossformatig, historisch codiert (1922 → heute) | Kombination mit Jahreszahl-Typografie |
 | Footer | Schmal, als dekoratives Element | Weiss auf `--color-dark` |
 
-**Stilregel:** Die Skyline ist immer **Linie, nie Fläche** – `stroke`, kein `fill`. Dünn, präzise, zurückhaltend. Sie unterstreicht, sie dominiert nicht.
+**Stilregel:** Grundcharakter ist die Linie – präzise, reduziert, zurückhaltend. Flächige Varianten sind möglich, abhängig von Kontext und Einsatzort. Entscheidung fällt in der Produktionsphase.
 
 ```
 Frauenkirche  Theatiner  Maximilianeum  Olympiaturm  …
@@ -205,7 +207,7 @@ Das Unternehmen hat München in seinen prägenden Jahrzehnten begleitet. Das dar
 
 - **Timeline-Element** auf der Über-uns-Seite: 1922 – Kriegsjahre – Wiederaufbau – Wirtschaftswunder – Gegenwart
 - **Historische Fotografie** (wenn vorhanden): schwarz-weiss, als Kontrast zu heutigen Aufnahmen
-- **Jahreszahlen typografisch** gross eingesetzt (`--font-display`, Playfair Display) als gestalterisches Mittel
+- **Jahreszahlen typografisch** gross eingesetzt (`--font-display`) als gestalterisches Mittel
 - **„Seit 1922"** nicht als Floskel, sondern als wiederkehrendes visuelles Ankerelement
 
 ---
@@ -327,8 +329,8 @@ Die neue Website übernimmt das bestehende Farbsystem der Rudolf Schäfer KG –
   --space-32:  8rem;      /* 128px */
 
   /* ── TYPOGRAFIE ───────────────────────────────────────────── */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: /* TBD – Serifen-Display-Schrift */, Georgia, serif;
+  --font-body:    /* TBD – Sans-Serif-Body-Schrift */, system-ui, sans-serif;
 
   --font-size-xs:       0.75rem;
   --font-size-sm:       0.875rem;
@@ -358,24 +360,19 @@ Die neue Website übernimmt das bestehende Farbsystem der Rudolf Schäfer KG –
 
 ## Typografie
 
-### Schrift-Entscheidung
+### Schrift-Konzept
 
-| Rolle | Schrift | Gewicht | CSS-Variable |
-|-------|---------|---------|--------------|
-| Display / Hero / H1–H2 | Playfair Display | 300, 400 | `--font-display` |
-| Body / UI / Labels | Inter | 400, 500, 600 | `--font-body` |
+| Rolle | Charakter | CSS-Variable |
+|-------|-----------|--------------|
+| Display / Hero / H1–H2 | Serifen-Schrift – klassisch, elegant, Autorität | `--font-display` |
+| Body / UI / Labels | Sans-Serif – klar, modern, gut lesbar | `--font-body` |
+
+> Konkrete Schriften werden in der Design-Phase festgelegt und mit dem Corporate Design abgestimmt.
 
 **Hinweis:** Das Logo nutzt eine kalligraphische Kursivschrift – wird als SVG beibehalten, kein Web-Font.
 
-**Self-hosted:** Alle Schriften lokal via `@font-face` – kein `fonts.googleapis.com` (DSGVO + Performance).
-
-```
-Download: google-webfonts-helper.herokuapp.com
-→ Playfair Display: 300, 400  →  /assets/fonts/playfair/
-→ Inter: 400, 500, 600        →  /assets/fonts/inter/
-→ Subset: latin, latin-ext
-→ Format: woff2 + woff Fallback
-```
+**Prinzip:** Alle Schriften self-hosted via `@font-face` – kein `fonts.googleapis.com` (DSGVO + Performance).
+Formate: woff2 (primär) + woff (Fallback), Subset latin/latin-ext.
 
 ---
 
@@ -427,7 +424,9 @@ Download: google-webfonts-helper.herokuapp.com
 
 ## Offene Design-Fragen
 
-- [ ] Logo: SVG-Dateien in allen Varianten vorhanden? (Quer hell/dunkel, Hoch hell/dunkel)
-- [ ] Corporate Design Manual vorhanden?
-- [ ] Foto-Shooting: Stil-Briefing abstimmen
+- [ ] Logo: SVG-Dateien in allen Varianten beschaffen (Quer hell/dunkel, Hoch hell/dunkel)
+- [x] Corporate Design: liegt vor / wird von Florian Perchtold weiterentwickelt
+- [x] Interner Ansprechpartner Kunde: Julie Schäfer
+- [ ] Foto-Shooting: optional – Stil-Briefing bei Bedarf abstimmen
 - [ ] Kalligraphie-Schrift des Logos identifizieren (ggf. für Headline-Akzente)
+- [ ] Schriften final festlegen (abhängig vom Corporate Design)

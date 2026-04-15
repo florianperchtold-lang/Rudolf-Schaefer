@@ -358,7 +358,7 @@ Bestand beibehalten – Pflichtlink in Newslettern.
 
 | # | Aufgabe | Verantwortlich | Prio |
 |---|---------|----------------|------|
-| 1 | Foto-Shooting: 25 Team-Portraits + Büro | Kunde | Kritisch |
+| 1 | Foto-Shooting: 25 Team-Portraits + Büro | Kunde | Optional |
 | 2 | SEO-Texte alle Seiten nach Content-Briefings | Agentur | Kritisch |
 | 3 | Stadtteiltexte: 8 Seiten à 500–700 Wörter | Agentur | Hoch |
 | 4 | Partnerschaften: Inhalte liefern | Kunde | Offen |

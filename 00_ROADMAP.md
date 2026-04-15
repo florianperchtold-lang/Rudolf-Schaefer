@@ -45,7 +45,7 @@ Diese Fragen müssen beantwortet sein bevor Phase 2 starten kann:
 | Offene Entscheidungen klären (siehe oben) | Kunde + Agentur | ⏳ offen |
 | Content-Briefings je Seite schreiben | perchtold.studio + Eberhard | ⏳ offen |
 | Keyword-Recherche vollständig | Robert Eberhard | ⏳ offen |
-| Foto-Shooting terminieren (25 Portraits + Büro) | Kunde | ⏳ offen |
+| Foto-Shooting terminieren (25 Portraits + Büro) | Kunde | ⏳ optional |
 | Logo SVG-Dateien beschaffen | Kunde | ⏳ offen |
 | Partnerschaften klären | Kunde | ⏳ offen |
 
@@ -92,7 +92,7 @@ Diese Fragen müssen beantwortet sein bevor Phase 2 starten kann:
 
 | Aufgabe | Verantwortlich | Status |
 |---------|---------------|--------|
-| Foto-Shooting durchführen | Kunde | ⏳ |
+| Foto-Shooting durchführen (optional) | Kunde | ⏳ |
 | Originale in Ordner sortieren (team/objekte/buero) | perchtold.studio | ⏳ |
 | Node.js Bild-Skript ausführen (sharp + Claude API) | perchtold.studio | ⏳ |
 | KI-Metadaten (Alt-Texte, Titel) QS + korrigieren | perchtold.studio | ⏳ |

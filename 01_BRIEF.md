@@ -24,7 +24,9 @@ Rudolf Schäfer KG ist ein Familienunternehmen in dritter Generation, gegründet
 
 Ausgangspunkt ist eine professionelle SEO-IST-Analyse (cult consult / Dipl.-Inf. Robert Eberhard, März 2026), die klare strukturelle Schwächen identifiziert: 94 % des organischen Traffics landen auf der Startseite, Unterseiten sind kaum sichtbar, Performance kritisch (Lighthouse Desktop 46 / Mobile 47).
 
-**Der Relaunch ist ein Wachstumsvorhaben – kein Design-Projekt.**
+**Der Relaunch ist ein Wachstumsvorhaben – und ein Designprojekt.**
+
+Marktführerschaft, moderne Expertise und Innovationskraft sollen nicht nur behauptet, sondern durch das Design sichtbar werden. Tradition und Zeitgemäßheit müssen visuell gleichwertig erlebbar sein. Die neue Website ist das stärkste Kommunikationsmittel des Unternehmens – sie muss beides leisten: SEO-Dominanz und gestalterische Überzeugungskraft.
 
 ---
 
@@ -151,9 +153,9 @@ Diese Differenziatoren sind einzigartig und nicht simulierbar:
 - [ ] Partnerschaften: Welche Partner sollen erscheinen?
 - [ ] Immobilien-Backend: Immobilie1 API, IS24/OpenImmo, oder manuelle CMS-Eingabe?
 - [ ] Newsletter-System: Welche Plattform aktuell? 5.921 Abonnenten exportierbar?
-- [ ] Foto-Shooting: Termin für Team-Portraits und Büro-Fotos?
-- [ ] Interner Ansprechpartner auf Kundenseite für Freigaben?
-- [ ] Corporate Design: Logo als SVG vorhanden?
+- [ ] Foto-Shooting: optional – Termin für Team-Portraits und Büro-Fotos bei Bedarf
+- [x] Interner Ansprechpartner auf Kundenseite: **Julie Schäfer** (juliekoessler@yahoo.de)
+- [x] Corporate Design: liegt vor / wird von Florian Perchtold weiterentwickelt
 
 ---
 

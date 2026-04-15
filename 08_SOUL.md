@@ -101,11 +101,15 @@ Gleichzeitig ist das Know-how nicht auf München begrenzt. Rudolf Schäfer KG ha
 
 ## Positionierung – die drei Ebenen
 
+München ist die Wurzel – nicht die Decke. Das Unternehmen will über seinen lokalen Bekanntheitsgrad hinauswachsen und als überregionale, nationale Größe wahrgenommen werden.
+
 ```
-LOKAL:      Münchens ältestes Immobilienunternehmen
-REGIONAL:   Der Spezialist für Oberbayern
-NATIONAL:   Kompetenz für ganz Deutschland
+LOKAL:      Münchens ältestes Immobilienunternehmen – starke Verwurzelung
+REGIONAL:   Der Spezialist für Oberbayern – Kernkompetenz
+NATIONAL:   Kompetenz für ganz Deutschland – Wachstumsziel
 ```
+
+> Der Münchenbezug ist Identität und Vertrauensbasis – kein limitierender Rahmen.
 
 ---
 

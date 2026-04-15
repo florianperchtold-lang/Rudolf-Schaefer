@@ -96,24 +96,22 @@ Für 11 Referenzobjekte und 8 Stadtteil-Seiten: repräsentative Fotos der jeweil
 
 ## Schriften (self-hosted)
 
-| Schrift | Gewichte | Subset | Download |
-|---------|----------|--------|----------|
-| Playfair Display | 300, 400, 600 | latin, latin-ext | google-webfonts-helper.herokuapp.com |
-| Inter | 400, 500, 600 | latin, latin-ext | google-webfonts-helper.herokuapp.com |
+> Konkrete Schriften werden in der Design-Phase festgelegt (abhängig vom Corporate Design).
+
+**Prinzip:** Alle Schriften self-hosted, kein Aufruf an fonts.googleapis.com (DSGVO + Performance).
+
+| Rolle | Charakter | CSS-Variable | Gewichte (ca.) |
+|-------|-----------|--------------|----------------|
+| Display | Serifen-Schrift | `--font-display` | 300, 400, (600) |
+| Body | Sans-Serif | `--font-body` | 400, 500, 600 |
 
 ```
 /assets/fonts/
-├── playfair/
-│   ├── playfair-display-v37-latin-300.woff2
-│   ├── playfair-display-v37-latin-regular.woff2
-│   └── playfair-display-v37-latin-600.woff2
-└── inter/
-    ├── inter-v13-latin-regular.woff2
-    ├── inter-v13-latin-500.woff2
-    └── inter-v13-latin-600.woff2
+├── display/    ← Serifen-Schrift (TBD)
+└── body/       ← Sans-Serif (TBD)
 ```
 
-> Nur benötigte Gewichte laden. Kein Aufruf an fonts.googleapis.com.
+> Format: woff2 (primär) + woff (Fallback). Subset: latin, latin-ext. Nur benötigte Gewichte laden.
 
 ---
 
@@ -128,7 +126,7 @@ Objekte:       objekt-schwabing-mehrfamilienhaus-01.jpg
 Stadtteile:    stadtteil-schwabing-muenchen.jpg
 Icons:         icon-hausverwaltung.svg
 OG-Images:     og-hausverwaltung-muenchen.jpg
-Schriften:     inter-v13-latin-regular.woff2
+Schriften:     [schriftname]-latin-regular.woff2
 
 Verboten:      IMG_1234.jpg | foto (1).jpg | Bild-NEU.png
 ```
@@ -186,7 +184,7 @@ Grafisches Kernelement der Website – Outline-Silhouette der Münchner Skyline 
 
 **Technische Anforderungen:**
 - Format: SVG, inline-fähig
-- Stil: ausschliesslich `stroke`, kein `fill` – Linie, nicht Fläche
+- Stil: primär als Linie (`stroke`), flächige Varianten möglich – Entscheidung in Produktion
 - Farbe: via CSS-Variable (kein hardcodiertes Hex im SVG)
 - Responsive: skaliert via `viewBox`, keine fixen Pixelbreiten
 - Dateiname: `grafik-muenchen-skyline-outline.svg`
@@ -201,7 +199,7 @@ Grafisches Kernelement der Website – Outline-Silhouette der Münchner Skyline 
 |---|---------|------|--------|
 | 1 | Logo SVG-Varianten vom Kunden beschaffen | Kritisch | Sofort |
 | 2 | Favicon + Apple Touch Icon + OG-Default erstellen | Kritisch | Design-Phase |
-| 3 | Foto-Shooting terminieren (25 Portraits + Büro) | Kritisch | Design-Phase |
+| 3 | Foto-Shooting terminieren (25 Portraits + Büro) | Optional | Design-Phase |
 | 4 | Schriften herunterladen + @font-face einrichten | Hoch | Tech-Setup |
 | 5 | Lucide Icon Sprite generieren | Hoch | Entwicklung |
 | 6 | Skyline-SVG recherchieren (öffentliche Quellen) | Hoch | Design-Phase |

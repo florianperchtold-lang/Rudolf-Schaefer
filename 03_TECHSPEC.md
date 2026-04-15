@@ -43,9 +43,6 @@ Elementor generiert aufgeblähten Code, render-blockierende Ressourcen,
 übermässiges JavaScript. War Hauptursache für Lighthouse 46/47 auf der
 aktuellen Seite – würde das Problem nach dem Relaunch wiederholen.
 
-> ⚠️ Hinweis: Bricks-Empfehlung stammt von Claude (nicht von
-> Robert Eberhard/cult consult). Eberhard hat nur "WordPress" empfohlen,
-> den Builder offen gelassen.
 
 ### ACF (Advanced Custom Fields)
 Ersetzt ein separates Headless-CMS. Verwaltet alle Custom Content-Typen:
@@ -623,7 +620,7 @@ var klaroConfig = {
 | Service | Hosting | Cookie-Banner nötig | Einwilligung |
 |---------|---------|---------------------|--------------|
 | Matomo Analytics | Self-hosted | Nein (DSGVO-Modus) | Nein |
-| Schriften (Inter, Playfair) | Self-hosted | Nein | Nein |
+| Schriften (self-hosted, TBD) | Self-hosted | Nein | Nein |
 | OpenStreetMap + Leaflet.js | CDN jsDelivr | Ja (empfohlen) | Optional |
 | Kontaktformular | Eigener Server | Nein | Nein |
 | Immobilie1 API | Extern | Ja | Ja |
