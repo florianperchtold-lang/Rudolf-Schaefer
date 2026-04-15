@@ -35,6 +35,33 @@ Ausgangspunkt ist eine professionelle SEO-IST-Analyse (cult consult / Dipl.-Inf.
 | Martin Schäfer | Komplementär (Enkel des Gründers) | 2000 / 2006 |
 | Erich Schäfer | Kommanditist (Sohn des Gründers) | 1963 |
 
+### Martin Schäfer – Ämter & Funktionen
+
+| Funktion | Organisation | Seit |
+|----------|-------------|------|
+| Vorstandsmitglied, Fachausschuss Verwalter | IVD Süd | 2007 |
+| Mitglied der Vollversammlung | IHK München und Oberbayern | 2010 |
+| Ehrenamtlicher Beisitzer, Einigungsstelle für Wettbewerbsstreitigkeiten | IHK | 2010 |
+| Mitglied des Immobilienausschusses | IHK | 2010 |
+| **Vorstandsvorsitzender** | **IVD Süd** | **2019** |
+| Ehrenamtlicher Verwaltungsrichter | Verwaltungsgericht München | 2020 |
+
+### Erich Schäfer – Auszeichnungen & Ämter
+
+**Auszeichnungen:**
+- Bundesverdienstkreuz am Bande
+- Goldene Ehrennadel des IVD Bundesverbandes
+- Ehrenmedaille der IHK Oberbayern
+
+**Ämter (historisch & aktuell):**
+
+| Funktion | Organisation | Zeitraum |
+|----------|-------------|----------|
+| Landesvorsitzender | RDM Bayern | 1974–1983 |
+| Ehrenamtlicher Handelsrichter | – | ehem. |
+| Vorsitzender des Prüfungsausschusses für Auszubildende der Immobilienwirtschaft | IHK | ehem. |
+| **Ehrenvorsitzender** | **IVD Süd** | aktuell |
+
 ---
 
 ## Leistungsbereiche
@@ -82,7 +109,7 @@ Diese Differenziatoren sind einzigartig und nicht simulierbar:
 - **100+ Jahre** ununterbrochene Präsenz in München – kein Wettbewerber kann das vorweisen
 - **Firmensitz seit 1957** an der Max-Joseph-Straße 8 – physische Stabilität
 - **Martin Schäfer:** Vorstandsvorsitzender IVD Süd seit 2019 – höchste Branchenautorität
-- **Erich Schäfer:** Bundesverdienstkreuz, Ehrenvorsitzender IVD, Ehrenmedaille IHK Oberbayern
+- **Erich Schäfer:** Bundesverdienstkreuz am Bande, Goldene Ehrennadel IVD Bundesverband, Ehrenmedaille IHK Oberbayern, Ehrenvorsitzender IVD Süd
 - **Team-Kontinuität:** Mitarbeitende seit 1992 (Doris Kreuzer, Ute Zimmermann)
 - **5.921 Newsletter-Abonnenten** – grösste Reichweite im Münchner Vermietungsmarkt
 - **Hausinterne Buchhaltung** – transparent, strukturiert, auf Werterhalt fokussiert

@@ -47,7 +47,24 @@ Die Grundlage für alles. Zuverlässigkeit im Alltag: korrekte Abrechnungen, sch
 Keine Gegensätze, sondern untrennbar verbunden. Der persönliche Kontakt – warm, nahbar, auf Augenhöhe – ist der Stil, mit dem das Unternehmen arbeitet. Nicht die Distanz einer anonymen Kanzlei.
 
 ### Verantwortung
-Martin Schäfer ist Vorstandsvorsitzender des IVD Süd. Erich Schäfer trägt Bundesverdienstkreuz und Ehrenmedaille der IHK Oberbayern. Das Engagement geht weit über das eigene Unternehmen hinaus – Rudolf Schäfer KG setzt Maßstäbe für die gesamte Branche.
+Das Engagement der Familie Schäfer geht weit über das eigene Unternehmen hinaus. Beide Generationen tragen Verantwortung für die Branche, die Ausbildung des Nachwuchses und das Gemeinwesen – seit Jahrzehnten, ehrenamtlich, mit Konsequenz.
+
+**Martin Schäfer:**
+- Seit 2007 im Vorstand des IVD Süd (Fachausschuss Verwalter)
+- Seit 2010 Mitglied der Vollversammlung der IHK München und Oberbayern
+- Ehrenamtlicher Beisitzer in der Einigungsstelle für Wettbewerbsstreitigkeiten
+- Mitglied des Immobilienausschusses der IHK
+- Seit 2019: **Vorstandsvorsitzender des IVD Süd** – höchste Branchenposition
+- Seit 2020: Ehrenamtlicher Verwaltungsrichter am Verwaltungsgericht München
+
+**Erich Schäfer:**
+- Landesvorsitzender RDM Bayern (1974–1983)
+- Ehemaliger ehrenamtlicher Handelsrichter
+- Ehemaliger Vorsitzender des IHK-Prüfungsausschusses für Auszubildende der Immobilienwirtschaft
+- **Ehrenvorsitzender des IVD Süd**
+- Auszeichnungen: Bundesverdienstkreuz am Bande · Goldene Ehrennadel des IVD Bundesverbandes · Ehrenmedaille der IHK Oberbayern
+
+Rudolf Schäfer KG setzt nicht nur Maßstäbe für Kunden – die Familie setzt Maßstäbe für die gesamte Immobilienwirtschaft.
 
 ---
 
@@ -55,7 +72,7 @@ Martin Schäfer ist Vorstandsvorsitzender des IVD Süd. Erich Schäfer trägt Bu
 
 **Konservativ, aber nahbar.** Martin Schäfer verkörpert die Unternehmensphilosophie persönlich: professionell und erfahren, dabei zugänglich und menschlich. Er ist kein Manager auf Distanz – er kennt seine Kunden, sein Team, und er ist präsent.
 
-Seine ehrenamtliche Arbeit beim IVD Süd zeigt: Dieser Mann denkt über das eigene Unternehmen hinaus und trägt Verantwortung für die Branche.
+Als Vorstandsvorsitzender des IVD Süd und ehrenamtlicher Verwaltungsrichter trägt er Verantwortung weit über das eigene Unternehmen hinaus – das ist keine Selbstdarstellung, das ist gelebte Haltung.
 
 ---
 
