@@ -172,6 +172,29 @@ Verboten:      IMG_1234.jpg | foto (1).jpg | Bild-NEU.png
 
 ---
 
+## Skyline-Grafik München (SVG)
+
+Grafisches Kernelement der Website – Outline-Silhouette der Münchner Skyline (Frauenkirche, Olympiaturm, Theatinerkirche, Maximilianeum u.a.).
+
+**Produktionsstrategie: Iterativ**
+
+| Phase | Vorgehen | Status |
+|-------|----------|--------|
+| **1. Sofortlösung** | Öffentliche Quellen (Wikimedia Commons, OpenStreetMap-Derivate, freie SVG-Repositories) – lizenzrechtlich prüfen, ggf. CC0 oder Public Domain | ⏳ Recherche |
+| **2. Anpassung** | Bestehende SVG manuell nachbearbeiten – Stilisierung, Reduktion auf Linien (`stroke only`), Anpassung an das Farbsystem | ⏳ Entwicklung |
+| **3. Finalisierung** | Eigene, projektspezifische Illustration – entweder intern oder beauftragt | ⏳ Produktion |
+
+**Technische Anforderungen:**
+- Format: SVG, inline-fähig
+- Stil: ausschliesslich `stroke`, kein `fill` – Linie, nicht Fläche
+- Farbe: via CSS-Variable (kein hardcodiertes Hex im SVG)
+- Responsive: skaliert via `viewBox`, keine fixen Pixelbreiten
+- Dateiname: `grafik-muenchen-skyline-outline.svg`
+
+> Entscheidung über finale Qualität und Herkunft fällt in der Produktionsphase. Start mit öffentlichen Quellen ist ausdrücklich geplant.
+
+---
+
 ## Offene Asset-Aufgaben
 
 | # | Aufgabe | Prio | Timing |
@@ -181,6 +204,8 @@ Verboten:      IMG_1234.jpg | foto (1).jpg | Bild-NEU.png
 | 3 | Foto-Shooting terminieren (25 Portraits + Büro) | Kritisch | Design-Phase |
 | 4 | Schriften herunterladen + @font-face einrichten | Hoch | Tech-Setup |
 | 5 | Lucide Icon Sprite generieren | Hoch | Entwicklung |
-| 6 | Partner-Logos beschaffen | Offen | Wenn Partnerinhalte vorliegen |
-| 7 | Bestehende CD-Fotos in WebP konvertieren | Mittel | Content-Phase |
-| 8 | OG-Images je Hauptseite erstellen (1200×630) | Mittel | Vor Launch |
+| 6 | Skyline-SVG recherchieren (öffentliche Quellen) | Hoch | Design-Phase |
+| 7 | Skyline-SVG anpassen und stilisieren | Mittel | Entwicklung |
+| 8 | Partner-Logos beschaffen | Offen | Wenn Partnerinhalte vorliegen |
+| 9 | Bestehende CD-Fotos in WebP konvertieren | Mittel | Content-Phase |
+| 10 | OG-Images je Hauptseite erstellen (1200×630) | Mittel | Vor Launch |

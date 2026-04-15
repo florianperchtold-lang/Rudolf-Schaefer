@@ -4,12 +4,218 @@
 
 ---
 
-## Design-Grundprinzipien
+## Design-Philosophie & Gestaltungsmetapher
+
+### Die Leitidee: Vertikal
+
+Die neue Website ist kein Redesign – sie ist ein gestalterisches Statement. Das Design spiegelt die Identität des Unternehmens: **geerdet und bodenständig, mit einem vertikalen Bestreben nach Weiterentwicklung.**
+
+Die Metapher ist konkret und inhärent:
+- **Gebäude sind vertikal.** Fassaden, Stockwerke, Türme – das Kerngeschäft selbst ist vertikal.
+- **Wachstum ist vertikal.** Das Bestreben, sich stets weiterzuentwickeln, drückt sich in Aufwärtsbewegung aus.
+- **Solidität ist die Basis.** Nicht Leichtigkeit, sondern Substanz. Von unten gewachsen, nach oben strebend.
+
+Das Ergebnis: Eine Site, die als **State of the Art** erkannt wird – innovativ und dynamisch in der Gestaltung, ohne den Charakter einer 100-jährigen Institution zu verlieren.
+
+```
+        ↑  Bestreben, Wachstum, Innovation
+        │
+        │  strukturiert · dynamisch · vertikal
+        │
+▓▓▓▓▓▓▓▓▓  solide Basis · Tradition · München
+```
+
+### Gestaltungsprinzipien
+
+| Prinzip | Bedeutung |
+|---------|-----------|
+| **Vertikal** | Komposition, Raster, Bewegungsrichtung – immer von unten nach oben |
+| **Fluid, nicht rows** | Kein mechanisches Reihen-Layout; Bereiche entstehen flüssig, organisch |
+| **Weißraum als Aussage** | Grosszügige Luft ist kein Fehler – sie ist Haltung. Man muss sich Weißraum leisten können. |
+| **State of the Art** | Die Seite soll als modern und innovativ wahrgenommen werden – Gestaltung auf Augenhöhe mit Premiummarken |
+| **Storytelling durch Scroll** | Inhalte werden nicht präsentiert, sondern erzählt – der Scroll ist der Erzähler |
+| **Strukturiert & kreativ** | Klare Ordnung, aber nie starr. Grid als Rahmen, nicht als Käfig. |
+
+---
+
+## Hero-Section — Das Signature-Element
+
+Der Hero ist das visuelle Aushängeschild der Seite und setzt die Designmetapher unmittelbar um.
+
+### Konzept: Fünf vertikale Balken
+
+```
+┌──┬────────┬──┬────────┬──┐
+│  │        │  │        │  │
+│  │  Bild  │↕ │  Bild  │  │
+│  │        │  │        │  │
+│  │        │[TEXT]     │  │
+│  │        │vertikal   │  │
+│  │        │  │        │  │
+└──┴────────┴──┴────────┴──┘
+  1     2    3     4    5
+```
+
+- **5 senkrechte Rechtecke** teilen den Hero-Bereich auf
+- Die Balken dienen als **Clip-Mask für das Hintergrundbild** – das Bild scheint durch die Balken hindurch
+- Balken **2 oder 4** enthält den **Hero-Text 90° rotiert** – `writing-mode: vertical-rl; transform: rotate(180deg)` – von unten nach oben lesbar
+- Die Balken haben **unterschiedliche vertikale Positionen** – leicht versetzt, nicht bündig ausgerichtet
+- Eine **organische, subtile Bewegung** animiert die Balken beim Laden oder beim Scroll (leichte Verschiebung auf der Y-Achse, unterschiedliches Timing per Balken)
+- Auf Mobile: Reduktion auf 3 Balken oder Übergang in vertikale Vollbreite
+
+### Hero-Inhalt
+
+| Element | Position | Beschreibung |
+|---------|----------|--------------|
+| Hintergrundbild | Vollflächig, durch Masken sichtbar | München-Panorama oder Architektur-Motiv |
+| H1 | Im Textbalken (2 oder 4), 90° rotiert von unten nach oben | Kurz, präzise – max. 4–5 Wörter |
+| Subline | Unterhalb der H1 im selben Balken, ebenfalls rotiert | Positionierungsaussage |
+| CTA | Am unteren Ende des Textbalkens | Primär-Button (horizontal, normal lesbar) |
+| Trust-Badges | Unterhalb der Balken, volle Breite | „Seit 1922 · München · 100+ Jahre" |
+
+### CSS-Grundlage Textbalken
+
+```css
+.hero-text-bar {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);   /* → liest von unten nach oben */
+  text-orientation: mixed;
+}
+```
+
+---
+
+## Scroll-Experience & Storytelling
+
+Die Seite wird nicht gelesen – sie wird **erlebt**. Der Scroll ist kein Navigationsmittel, er ist der **Erzählrhythmus**.
+
+### Prinzipien
+
+- **Smooth Scrolling** – kein hartes Springen zwischen Sektionen
+- **Elemente entstehen**, sie erscheinen nicht einfach – Fade, leichtes translateY, Timing gestaffelt
+- **Sections lösen sich auf** und gehen ineinander über – kein hartes Raster-Ende
+- **Fluid Transitions** zwischen Inhaltsbereichen: Farb- und Bildübergänge folgen dem Scroll
+- **Narrative Logik:** Jede Section beantwortet die Frage, die die vorherige aufgeworfen hat
+
+### Scroll-Effekte (erlaubt & erwünscht)
+
+| Effekt | Trigger | Umsetzung |
+|--------|---------|-----------|
+| Hero-Balken Einfahrt | Page Load | CSS Keyframes, gestaffeltes Delay je Balken |
+| Hero-Balken Parallax (subtil) | Scroll | CSS `transform: translateY` via JS scroll-listener |
+| Section-Elemente fade-in + rise | Intersection Observer | CSS Transition + translateY(24px → 0) |
+| Text-Reveal gestaffelt | Scroll in Viewport | Staggered Animation, children mit delay |
+| Trust-Counter hochzählen | Scroll in Viewport | Kleines JS-Snippet |
+| Sticky-Header | Scroll > 80px | CSS-Klasse per JS |
+| Bild Lazy-Load Fade | Intersection Observer | CSS opacity |
+| Nav-Unterstrich | Hover | CSS `::after` Transform scaleX |
+| Akkordeon öffnen/schliessen | Klick | CSS max-height Transition |
+
+> **Alle Animationen respektieren `prefers-reduced-motion: reduce`.**
+> Performance-Budget: Keine Animation darf Layout-Recalculation triggern → ausschliesslich `transform` und `opacity`.
+
+### Verboten (Performance & Fokus)
+
+- ❌ GSAP, Framer Motion, Locomotive Scroll *(Library-Overhead)*
+- ❌ Page Transitions (Barba.js)
+- ❌ Custom Cursor
+- ❌ Exzessiver Parallax (Hintergrundbilder die bei jedem Scroll-Pixel neu rechnen)
+- ❌ Video-Backgrounds
+- ❌ Scroll-Hijacking (natürlicher Scroll-Flow muss erhalten bleiben)
+
+---
+
+## Fluid Layout — kein Row-Denken
+
+Die Seite folgt keiner klassischen „Section nach Section"-Logik. Stattdessen:
+
+- **Elemente überlappen** bewusst Section-Grenzen (Cards die aus einer Section in die nächste ragen)
+- **Hintergründe wechseln graduell**, nicht abrupt (CSS `background-attachment`, sanfte Farbübergänge)
+- **Asymmetrie ist erlaubt**: Nicht jede Section ist zentriert oder gleichmässig aufgeteilt
+- **Negative Space ist aktiv**: Weißraum wird platziert, nicht als Lücke toleriert
+- **Schrift kann gross sein**: Headlines dürfen die Bildschirmbreite füllen, wenn der Inhalt es trägt
+
+### Layout-Archetypen (statt starrer Rows)
+
+| Typ | Beschreibung | Einsatz |
+|-----|-------------|---------|
+| **Vollbild-Anker** | Volle Viewporthöhe, ein dominantes Element | Hero, Key-Statements |
+| **Offset-Grid** | Bild und Text überlappen, unterschiedliche Startpunkte | Leistungsbereiche |
+| **Floating Cards** | Cards ohne expliziten Container-Rahmen | Referenzen, Team |
+| **Text-Dominant** | Grosser Weißraum, wenig Elemente, viel Luft | Zitate, USP-Statements |
+| **Dichte Kachel** | Strukturiertes Raster für viele gleichwertige Items | Mietobjekte, News |
+
+---
+
+## München-Identität im Design
+
+### Leitprinzip: „Laptop und Lederhose"
+
+München ist keine bayerische Klischeestadt – es ist eine der modernsten Metropolen Europas, die gleichzeitig tief in ihrer Geschichte verwurzelt ist. Das Design spiegelt genau das: **urban, zeitgemäss, weltgewandt – und unverkennbar münchnerisch.**
+
+Was das bedeutet:
+
+| Erwünscht | Verboten |
+|-----------|----------|
+| Skyline-Silhouette als grafisches Mittel | Weissblaue Rauten, Bierkrug-Assoziationen |
+| Stadtteile als Orientierungspunkte | Touristisches Postkarten-München |
+| Zeitgeschichte als Substanz | Folklore-Ästhetik |
+| Architektonische Präzision | Gemütlichkeits-Kitsch |
+| Modernes München mit Tiefe | Beliebige Großstadt-Optik |
+
+---
+
+### Outline-Skyline als grafisches Element
+
+Die Münchner Skyline – Frauenkirche, Olympiaturm, Theatinerkirche, Maximilianeum – wird als **reduzierte Outline-Grafik (SVG)** eingesetzt. Kein illustrativer, dekorativer Stil – sondern architektonisch präzise, minimalistisch, auf Linie reduziert.
+
+**Einsatzmöglichkeiten:**
+
+| Position | Verwendung | Stil |
+|----------|------------|------|
+| Hero-Bereich | Als horizontale Silhouette am unteren Bildrand | Weiss/transparent auf dunklem Overlay |
+| Section-Trenner | Subtile Skyline-Linie als Divider | `--color-border` oder `--color-primary` mit sehr niedriger Opacity |
+| Über-uns-Seite | Grossformatig, historisch codiert (1922 → heute) | Kombination mit Jahreszahl-Typografie |
+| Footer | Schmal, als dekoratives Element | Weiss auf `--color-dark` |
+
+**Stilregel:** Die Skyline ist immer **Linie, nie Fläche** – `stroke`, kein `fill`. Dünn, präzise, zurückhaltend. Sie unterstreicht, sie dominiert nicht.
+
+```
+Frauenkirche  Theatiner  Maximilianeum  Olympiaturm  …
+    ╱╲              ╱\        ┌──┐          │
+   ╱  ╲            ╱  \       │  │          │
+──╱────╲──────────╱────\──────┤  ├──────────┼──────────
+```
+
+---
+
+### Lokaler Bezug: Stadtteile
+
+Rudolf Schäfer KG kennt jeden Münchner Stadtteil – das ist ein konkreter Wettbewerbsvorteil. Das Design macht ihn sichtbar:
+
+- **Stadtteil-Seiten** (SEO-Cluster) haben je ein authentisches Motiv des Stadtteils – kein Stock-Photo, sondern erkennbare Architektur
+- **Referenz-Objekte** werden mit Stadtteil-Kontext verknüpft (Schwabing, Maxvorstadt, Bogenhausen, Haidhausen …)
+- **Kartografische Elemente** sind möglich: eine reduzierte München-Karte als interaktives Element auf der Über-uns-Seite, das die verwalteten Stadtteile zeigt
+
+---
+
+### Geschichte als Design-Substanz
+
+Das Unternehmen hat München in seinen prägenden Jahrzehnten begleitet. Das darf sichtbar werden – als Substanz, nicht als Nostalgie:
+
+- **Timeline-Element** auf der Über-uns-Seite: 1922 – Kriegsjahre – Wiederaufbau – Wirtschaftswunder – Gegenwart
+- **Historische Fotografie** (wenn vorhanden): schwarz-weiss, als Kontrast zu heutigen Aufnahmen
+- **Jahreszahlen typografisch** gross eingesetzt (`--font-display`, Playfair Display) als gestalterisches Mittel
+- **„Seit 1922"** nicht als Floskel, sondern als wiederkehrendes visuelles Ankerelement
+
+---
+
+## Design-Grundprinzipien (technisch)
 
 Die neue Website übernimmt das bestehende Farbsystem der Rudolf Schäfer KG – kein Bruch mit der Markenidentität, sondern technisch saubere Weiterentwicklung als CSS Design-Tokens.
 
 - **Mobile First** – alle Designs zuerst für Mobile konzipieren
-- **Performance-Design** – keine schweren Animationen, kein übermässiges JS
+- **Performance-Design** – Animationen ausschliesslich über `transform` + `opacity`, kein Layout-Thrashing
 - **Komponenten-Architektur** – isolierte, wiederverwendbare Bausteine in VC Studio
 - **Kein Hardcoding** – alle Farben über CSS Custom Properties, alle Inhalte über CMS
 
@@ -216,32 +422,6 @@ Download: google-webfonts-helper.herokuapp.com
 | `kontakt-block` | Aus Firmen-Settings | Kontakt, Footer |
 | `partner-grid` | Logo, Name, Beschreibung, URL | Partnerschaften **[OFFEN]** |
 | `stadtteil-intro` | Stadtteil, SEO-Text, Referenzen[] | Stadtteil-Seiten |
-
----
-
-## Animations-Konzept
-
-### Erlaubt
-
-| Animation | Trigger | Umsetzung |
-|-----------|---------|-----------|
-| Fade-in + translateY | Scroll (Intersection Observer) | CSS Transition |
-| Trust-Counter hochzählen | Scroll in Viewport | Kleines JS-Snippet |
-| Akkordeon öffnen/schliessen | Klick | CSS max-height Transition |
-| Button Hover | Hover | `filter: brightness(0.88)` auf Primary |
-| Sticky Header | Scroll > 80px | CSS-Klasse per JS |
-| Bild Lazy-Load Fade | Intersection Observer | CSS opacity |
-| Nav-Unterstrich | Hover | CSS `::after` Transform scaleX |
-
-### Verboten
-
-- ❌ GSAP, Framer Motion, Locomotive Scroll
-- ❌ Page Transitions (Barba.js)
-- ❌ Custom Cursor
-- ❌ Parallax-Effekte
-- ❌ Video-Backgrounds
-
-> Alle Animationen respektieren `prefers-reduced-motion: reduce`.
 
 ---
 

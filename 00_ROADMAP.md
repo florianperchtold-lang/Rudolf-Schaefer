@@ -39,7 +39,7 @@ Diese Fragen müssen beantwortet sein bevor Phase 2 starten kann:
 | Aufgabe | Verantwortlich | Status |
 |---------|---------------|--------|
 | SEO IST-Analyse | Robert Eberhard | ✅ fertig |
-| Projektdokumentation (01–07) | perchtold.studio | ✅ fertig |
+| Projektdokumentation (01–07, 08) | perchtold.studio | ✅ fertig |
 | Stack-Entscheidung WordPress + Bricks + ACF | perchtold.studio | ✅ entschieden |
 | GitHub Repository einrichten | perchtold.studio | ✅ fertig |
 | Offene Entscheidungen klären (siehe oben) | Kunde + Agentur | ⏳ offen |
