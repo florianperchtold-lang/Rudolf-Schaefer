@@ -348,7 +348,7 @@ Tone of Voice aus 01_BRIEF.md.
 ## Analytics & Monitoring
 
 **Aktuell (Bestand):** etracker (reaktiviert Aug. 2025, von Fairrank genutzt)
-**Neu (Relaunch):** Matomo self-hosted oder Plausible CE – kein Cookie-Banner nötig
+**Neu (Relaunch):** Matomo self-hosted, Plausible CE oder Google Analytics – **Entscheidung Robert Eberhard ausstehend**
 
 | KPI | Ziel nach 6 Monaten |
 |-----|---------------------|
@@ -396,7 +396,7 @@ Tone of Voice aus 01_BRIEF.md.
 - [ ] Eberhard: Konkrete Seitenstruktur-Empfehlung auf Basis Keywordanalyse anfordern
 - [ ] Eberhard: Off-Page-SEO-Strategie als separaten Step besprechen
 - [ ] SEO-Plugin auswählen: RankMath vs. SEOPress (für WordPress/Bricks)
-- [ ] Matomo self-hosted einrichten (etracker ablösen)
+- [ ] Analytics-Tool einrichten (etracker ablösen) – Tool nach Empfehlung Robert Eberhard
 - [ ] Fairrank-Vertrag: Kündigung prüfen / Übergabe an Eberhard koordinieren
 - [ ] Sitemap nach Launch in Search Console einreichen
 - [ ] robots.txt Staging sperren

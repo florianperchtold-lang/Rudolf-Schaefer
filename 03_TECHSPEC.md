@@ -132,7 +132,7 @@ Reihenfolge strikt einhalten:
 - robots.txt: Staging sperren, Prod freigeben
 - Google Search Console verbinden, Sitemap einreichen
 - Google Business Profile URL aktualisieren
-- Monitoring: Matomo + Search Console
+- Monitoring: Analytics-Tool (TBD) + Search Console
 
 ---
 
@@ -341,7 +341,7 @@ Formulare: CSRF-Token + Honeypot + Rate-Limiting
 
 | Element | Lösung |
 |---------|--------|
-| Analytics | Matomo self-hosted oder Plausible CE |
+| Analytics | Matomo self-hosted, Plausible CE oder Google Analytics – **Entscheidung Robert Eberhard** |
 | Schriften | Self-hosted – kein fonts.googleapis.com |
 | Karte | OpenStreetMap + Leaflet.js |
 | Kontaktformular | SMTP via Plesk |
@@ -404,7 +404,7 @@ MATOMO_SITE_ID=
 - [ ] Mehrsprachigkeit: WPML vs. Polylang
 - [ ] MCP: Novamira oder Alternative
 - [ ] Mietangebote: Immobilie1 API verfügbar? IS24?
-- [ ] Analytics: Matomo self-hosted vs. Plausible CE
+- [ ] Analytics: Matomo / Plausible CE / Google Analytics – Empfehlung Robert Eberhard einholen
 - [ ] Newsletter-System: aktuell verwendete Plattform? Export möglich?
 - [ ] Hosting: Plesk-Plan – Node.js verfügbar? PHP-Version?
 
@@ -441,10 +441,10 @@ Ziel: Jedes Mietobjekt bekommt eine eigene WordPress-URL mit eigenem SEO-Wert.
 
 | | IST (Bestand) | SOLL (Relaunch) |
 |--|---------------|-----------------|
-| Tool | etracker (von Fairrank genutzt) | Matomo self-hosted |
-| Cookie-Banner | Ja (etracker benötigt Einwilligung) | Nein (Matomo DSGVO-konform ohne Banner) |
-| Daten-Kontrolle | Bei etracker GmbH | Selbst gehostet |
-| Google Analytics | Nein | Nein |
+| Tool | etracker (von Fairrank genutzt) | Matomo / Plausible CE / Google Analytics – **offen, Entscheidung Robert Eberhard** |
+| Cookie-Banner | Ja (etracker benötigt Einwilligung) | Abhängig vom gewählten Tool |
+| Daten-Kontrolle | Bei etracker GmbH | Abhängig vom gewählten Tool |
+| Google Analytics | Nein | Möglich – Entscheidung ausstehend |
 
 ---
 

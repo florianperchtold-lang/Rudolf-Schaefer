@@ -145,12 +145,11 @@ Diese Fragen müssen beantwortet sein bevor Phase 2 starten kann:
 | 301 Redirect-Map aktivieren und testen | perchtold.studio | ⏳ |
 | robots.txt: Staging sperren, Prod freigeben | perchtold.studio | ⏳ |
 | Staging → rudolfschaefer.de deployen | perchtold.studio | ⏳ |
-| Google Search Console verbinden | perchtold.studio | ⏳ |
+| Google Search Console verbinden | Robert Eberhard | ⏳ |
 | Sitemap einreichen | perchtold.studio | ⏳ |
-| Google Business Profile URL aktualisieren | perchtold.studio | ⏳ |
-| Matomo einrichten + testen | perchtold.studio | ⏳ |
-| Verzeichnisse aktualisieren (muenchen.de, IVD etc.) | perchtold.studio | ⏳ |
-| Fairrank-Zugang entziehen | Kunde | ⏳ |
+| Google Business Profile URL aktualisieren | Robert Eberhard & Rudolf Schäfer KG | ⏳ |
+| Analytics einrichten + testen (Matomo oder Google Analytics – Entscheidung Robert Eberhard) | Robert Eberhard | ⏳ |
+| Verzeichnisse aktualisieren (muenchen.de, IVD etc.) | Robert Eberhard | ⏳ |
 | Robert Eberhard: Post-Launch SEO-Monitoring | Robert Eberhard | ⏳ |
 
 ---
